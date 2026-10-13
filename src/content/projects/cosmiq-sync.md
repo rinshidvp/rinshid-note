@@ -21,7 +21,7 @@ limitations:
   - Access is based on a shared room code. Avoid putting sensitive files in a workspace.
   - The interface shows an expiry countdown; server-side automatic deletion still needs verification.
   - Items load when a workspace opens and after local changes. The current interface does not subscribe to live updates from another device.
-source: https://github.com/muhammedrinshidvpr-coder/cosmiq-sync
+source: https://github.com/rinshidvp/cosmiq-sync
 demo: https://cosmiq-sync.vercel.app/
 ---
 ## A simpler handoff

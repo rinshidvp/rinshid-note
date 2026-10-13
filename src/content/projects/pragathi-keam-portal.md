@@ -20,7 +20,7 @@ lessons:
 limitations:
   - Historical cutoffs are reference information, not a guarantee of admission or current eligibility.
   - Applicants should verify dates, rules, and allotment decisions with official admissions sources.
-source: https://github.com/muhammedrinshidvpr-coder/pragathi-keam-portal
+source: https://github.com/rinshidvp/pragathi-keam-portal
 ---
 ## Bringing the information together
 

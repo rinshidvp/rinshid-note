@@ -3,8 +3,8 @@
 ## Live destinations
 
 - Production: https://rinshid-portfolio.vercel.app/
-- Repository: https://github.com/muhammedrinshidvpr-coder/rinshid-portfolio
-- Existing portfolio address: https://muhammedrinshidvpr-coder.github.io/rinshid-portfolio/ — redirect to production.
+- Repository: https://github.com/rinshidvp/rinshid-portfolio
+- Existing portfolio address: https://rinshidvp.github.io/rinshid-portfolio/ — redirect to production.
 - Vercel project: `rinshid-portfolio`; framework Astro, static `dist` output, production branch `main`, GitHub repository linked, Git deployment creation enabled.
 - GitHub Pages uses Actions deployment, uploading only approved redirect HTML. It does not serve the repository/content tree.
 

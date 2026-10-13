@@ -2,7 +2,7 @@
 
 A warm, static portfolio and publishing home. Built with Astro 7, TypeScript, Markdown content collections, and ordinary CSS. No database, CMS, tracking scripts, or client-side framework runtime.
 
-**Live:** https://rinshid-portfolio.vercel.app/ · **Source:** https://github.com/muhammedrinshidvpr-coder/rinshid-portfolio
+**Live:** https://rinshid-portfolio.vercel.app/ · **Source:** https://github.com/rinshidvp/rinshid-portfolio
 
 See [delivery validation](docs/VALIDATION.md) for the completed checks and deployment details.
 
@@ -54,7 +54,7 @@ Vercel framework: Astro. Install: `npm ci`. Build: `npm run check && npm run bui
 
 The production origin is configured in `src/config/site.ts`; use `SITE_URL` for a custom domain and redeploy. Use `BASE_PATH=/subdirectory/` only when hosting in a subdirectory; helpers apply it to generated links/assets/feeds. Author-written Markdown links must account for the chosen base path (see author guide).
 
-`muhammedrinshidvpr-coder/rinshid-portfolio` is connected to the Vercel project `rinshid-portfolio`, with `main` as production branch. Normal pushes build production, and other branches receive previews. Preview deployments should use Vercel’s preview noindex behavior. Test production after changing domains, including canonicals, RSS and sitemap: `node scripts/verify-live.mjs https://rinshid-portfolio.vercel.app`.
+`rinshidvp/rinshid-portfolio` is connected to the Vercel project `rinshid-portfolio`, with `main` as production branch. Normal pushes build production, and other branches receive previews. Preview deployments should use Vercel’s preview noindex behavior. Test production after changing domains, including canonicals, RSS and sitemap: `node scripts/verify-live.mjs https://rinshid-portfolio.vercel.app`.
 
 ## Publishing integration tests
 

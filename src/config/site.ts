@@ -37,7 +37,7 @@ export const site = {
     { label: 'Contact', path: '/contact/' }, { label: 'All links', path: '/links/' },
   ],
   links: [
-    { platform: 'GitHub', url: 'https://github.com/muhammedrinshidvpr-coder', purpose: 'Source code, experiments, releases, and project discussions.', order: 1, featured: true, group: 'Code' },
+    { platform: 'GitHub', url: 'https://github.com/rinshidvp', purpose: 'Source code, experiments, releases, and project discussions.', order: 1, featured: true, group: 'Code' },
     { platform: 'LinkedIn', url: 'https://www.linkedin.com/in/rinshidrazaq/', purpose: 'My professional profile and a place to connect.', order: 2, featured: true, group: 'Connect' },
     { platform: 'YouTube', url: 'https://www.youtube.com/@RinshidRazaq', purpose: 'My channel, under the name Rinshid Razaq.', order: 3, featured: true, group: 'Watch' },
     { platform: 'Instagram', url: 'https://www.instagram.com/rinshidrazaq/', purpose: 'Find me as @rinshidrazaq.', order: 4, featured: false, group: 'Connect' },

@@ -20,8 +20,8 @@ lessons:
 limitations:
   - The installation guide targets Windows. Check the current release before using another operating system.
   - BlinkBreak encourages break habits; it is not a medical device.
-source: https://github.com/muhammedrinshidvpr-coder/blinkbreak
-demo: https://github.com/muhammedrinshidvpr-coder/blinkbreak/releases/latest
+source: https://github.com/rinshidvp/blinkbreak
+demo: https://github.com/rinshidvp/blinkbreak/releases/latest
 ---
 ## Reminders that fit around the work
 
