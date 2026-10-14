@@ -2,7 +2,7 @@
 
 A warm, static portfolio and publishing home. Built with Astro 7, TypeScript, Markdown content collections, and ordinary CSS. No database, CMS, tracking scripts, or client-side framework runtime.
 
-**Live:** https://rinshid-portfolio.vercel.app/ · **Source:** https://github.com/rinshidvp/rinshid-portfolio
+**Live:** https://rinshid-note.vercel.app/ · **Source:** https://github.com/rinshidvp/rinshid-note
 
 See [delivery validation](docs/VALIDATION.md) for the completed checks and deployment details.
 

@@ -2,10 +2,10 @@
 
 ## Live destinations
 
-- Production: https://rinshid-portfolio.vercel.app/
-- Repository: https://github.com/rinshidvp/rinshid-portfolio
-- Existing portfolio address: https://rinshidvp.github.io/rinshid-portfolio/ — redirect to production.
-- Vercel project: `rinshid-portfolio`; framework Astro, static `dist` output, production branch `main`, GitHub repository linked, Git deployment creation enabled.
+- Production: https://rinshid-note.vercel.app/
+- Repository: https://github.com/rinshidvp/rinshid-note
+- Existing portfolio address: https://rinshidvp.github.io/rinshid-note/ — redirect to production.
+- Vercel project: `rinshid-note`; framework Astro, static `dist` output, production branch `main`, GitHub repository linked, Git deployment creation enabled.
 - GitHub Pages uses Actions deployment, uploading only approved redirect HTML. It does not serve the repository/content tree.
 
 ## Checks performed
@@ -41,7 +41,7 @@ Three source-reviewed public projects: BlinkBreak, CosmIQ Sync and Pragathi KEAM
 Use the commands in [README](../README.md) for production and publishing fixture tests. For live validation:
 
 ```sh
-node scripts/verify-live.mjs https://rinshid-portfolio.vercel.app
+node scripts/verify-live.mjs https://rinshid-note.vercel.app
 ```
 
 Automated accessibility checks complement, but do not replace, manual reading and assistive-technology testing. The site is prepared for Malayalam publishing; real editorial translations have not been supplied.

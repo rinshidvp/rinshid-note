@@ -4,7 +4,6 @@
   "buildCommand": "npm run check && npm run build && npm run verify",
   "outputDirectory": "dist",
   "trailingSlash": true,
-  "redirects": [{ "source": "/Rinshid_CV.html", "destination": "/about/", "permanent": true }],
   "headers": [{ "source": "/(.*)", "headers": [
     { "key": "X-Content-Type-Options", "value": "nosniff" },
     { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },

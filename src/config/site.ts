@@ -6,7 +6,7 @@ export const site = {
   name: 'Muhammed Rinshid V P',
   shortName: 'Rinshid',
   title: "Rinshid’s notebook",
-  url: process.env.SITE_URL || 'https://rinshid-portfolio.vercel.app',
+  url: process.env.SITE_URL || 'https://rinshid-note.vercel.app',
   bio: 'CS student and founder of CosmIQ. Helping fellow students adapt to AI, learn through building, and make time for what matters.',
   mastheadNote: 'Learn by building. Make time for what matters.',
   profile: {

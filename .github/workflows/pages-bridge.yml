@@ -1,4 +1,4 @@
-name: Redirect old portfolio to Open Notebook
+name: Redirect old note address to Rinshid Note
 on:
   push:
     branches: [main]
@@ -24,7 +24,6 @@ jobs:
         run: |
           mkdir _site
           cp index.html _site/index.html
-          cp index.html _site/Rinshid_CV.html
       - uses: actions/upload-pages-artifact@v3
         with:
           path: _site

@@ -1,6 +1,6 @@
 import { chromium } from '@playwright/test';
 import assert from 'node:assert/strict';
-const origin = process.argv[2] || 'https://rinshid-portfolio.vercel.app';
+const origin = process.argv[2] || 'https://rinshid-note.vercel.app';
 const browser = await chromium.launch({ channel: 'chrome' });
 try {
   const context = await browser.newContext();
