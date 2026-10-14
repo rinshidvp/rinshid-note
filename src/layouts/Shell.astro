@@ -42,7 +42,7 @@ const isActive = (path: string) => path === '/' ? current === pathFor('/') : cur
           <nav aria-label="Main navigation"><ul>{site.navigation.map((link) => <li><a href={pathFor(link.path)} aria-current={isActive(link.path) ? 'page' : undefined}>{link.label}</a></li>)}</ul></nav>
           <nav class="secondary-nav" aria-label="Explore more"><ul>{site.secondary.map((link) => <li><a href={pathFor(link.path)} aria-current={isActive(link.path) ? 'page' : undefined}>{link.label}</a></li>)}</ul></nav>
           <nav class="secondary-nav" aria-label="Elsewhere"><ul>{publicLinks.filter((link) => link.platform === 'Portfolio').map((link) => <li><a href={link.url}>Portfolio <span aria-hidden="true">↗</span></a></li>)}</ul></nav>
-          <p class="rail-location">From Kerala, India<br /><span lang="ml">പഠിച്ചുകൊണ്ടിരിക്കുന്നു.</span></p>
+          <p class="rail-location">From Kerala, India</p>
         </aside>
         <main id="main" tabindex="-1"><slot /></main>
       </div>
