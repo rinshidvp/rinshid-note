@@ -1,6 +1,6 @@
 # Open Notebook — Muhammed Rinshid V P
 
-A warm, static portfolio and publishing home. Built with Astro 7, TypeScript, Markdown content collections, and ordinary CSS. No database, CMS, tracking scripts, or client-side framework runtime.
+A warm, reading-first publishing home. A short author bio and social links lead to the separate [portfolio](https://rinshid-portfolio.vercel.app/) for projects and experience. Built with Astro 7, TypeScript, Markdown content collections, and ordinary CSS. No database, CMS, tracking scripts, or client-side framework runtime.
 
 **Live:** https://rinshid-note.vercel.app/ · **Source:** https://github.com/rinshidvp/rinshid-note
 
@@ -46,7 +46,7 @@ tasks/                   Implementation plan
 .local/                  Ignored discovery notes and test artifacts
 ```
 
-Original portfolio HTML remains in Git history; original CSS, JavaScript, images and CV remain in the repository for reference. Vercel serves **only `dist/`**. The old CV URL redirects to About; no current resume is asserted. The GitHub Pages workflow uploads only the root redirect `index.html`, never the source/content directories.
+The HTML portfolio now lives in [`rinshidvp/rinshid-portfolio`](https://github.com/rinshidvp/rinshid-portfolio). Home and About keep this site focused on reading; previous project case studies and Now pages remain available at their existing URLs. Vercel serves **only `dist/`**; no CV is hosted here. The GitHub Pages workflow uploads only the root redirect `index.html`, never the source/content directories.
 
 ## Deployment
 
@@ -54,7 +54,7 @@ Vercel framework: Astro. Install: `npm ci`. Build: `npm run check && npm run bui
 
 The production origin is configured in `src/config/site.ts`; use `SITE_URL` for a custom domain and redeploy. Use `BASE_PATH=/subdirectory/` only when hosting in a subdirectory; helpers apply it to generated links/assets/feeds. Author-written Markdown links must account for the chosen base path (see author guide).
 
-`rinshidvp/rinshid-portfolio` is connected to the Vercel project `rinshid-portfolio`, with `main` as production branch. Normal pushes build production, and other branches receive previews. Preview deployments should use Vercel’s preview noindex behavior. Test production after changing domains, including canonicals, RSS and sitemap: `node scripts/verify-live.mjs https://rinshid-portfolio.vercel.app`.
+`rinshidvp/rinshid-note` is connected to the Vercel project `rinshid-note`, with `main` as production branch. Normal pushes build production, and other branches receive previews. Preview deployments should use Vercel’s preview noindex behavior. Test production after changing domains, including canonicals, RSS and sitemap: `node scripts/verify-live.mjs https://rinshid-note.vercel.app`.
 
 ## Publishing integration tests
 
@@ -77,4 +77,4 @@ Draft canaries in source test exclusion from every `dist` file, including client
 
 ## Rollback
 
-Promote the previous deployment in Vercel, or revert the portfolio implementation commit and deploy the desired version. Original single-page site starts at commit `592a7ea`.
+Promote a previous notebook deployment in Vercel, or revert the relevant notebook change and deploy. The separate HTML portfolio is maintained in its own repository and Vercel project.

@@ -1,8 +1,9 @@
 import { test, expect } from '@playwright/test';
 import AxeBuilder from '@axe-core/playwright';
 
-test('visitors can explore projects and contact the author without broken routes', async ({ page }) => {
-  await page.goto('/');
+test('legacy project links and author contact remain available', async ({ page }) => {
+  await page.goto('/projects/');
+  await expect(page.getByRole('link', { name: 'my GitHub profile ↗', exact: true })).toHaveAttribute('href', 'https://github.com/rinshidvp');
   await page.getByRole('link', { name: 'BlinkBreak', exact: true }).click();
   await expect(page.getByRole('heading', { level: 1 })).toHaveText('BlinkBreak');
   await expect(page.getByRole('heading', { name: 'What it does' })).toBeVisible();
@@ -57,15 +58,35 @@ test('keyboard skip link and desktop composition are usable', async ({ page }) =
   await expect(page.getByRole('heading', { level: 1 })).toHaveText('Videos.');
 });
 
-test('profile is visible on mobile and past automation work is dated accurately', async ({ page }) => {
+test('notebook is reading-first with a short bio, portfolio and social links', async ({ page }) => {
   await page.setViewportSize({ width: 390, height: 844 }); await page.goto('/');
   await expect(page.locator('main .intro')).toContainText('Muhammed Rinshid V P');
-  await expect(page.locator('.hero-context')).toContainText('Previously: n8n automation on AWS at Azmora · June–August 2026');
-  await page.getByRole('link', { name: 'About me', exact: true }).click();
-  await expect(page.locator('.experience-list')).toContainText('CosmIQ · Founder');
-  await expect(page.locator('.experience-list')).toContainText('June–August 2026 · Past work');
-  await expect(page.locator('.experience-list')).toContainText('This work ended in August 2026');
-  await page.getByRole('navigation', { name: 'Main navigation' }).getByRole('link', { name: 'Now', exact: true }).click();
+  await expect(page.locator('main')).not.toContainText('Selected projects');
+  await expect(page.locator('main')).not.toContainText('Previously:');
+  await expect(page.locator('main')).not.toContainText('On my desk');
+  const navigation = page.getByRole('navigation', { name: 'Main navigation' });
+  await expect(navigation.getByRole('link', { name: 'Projects', exact: true })).toHaveCount(0);
+  await page.getByRole('link', { name: 'Browse writing' }).click();
+  await expect(page).toHaveURL(/\/writing\/$/);
+  await navigation.getByRole('link', { name: 'About', exact: true }).click();
+  await expect(page.locator('main .summary')).toContainText('CS student and builder from Kerala');
+  await expect(page.locator('.experience-list')).toHaveCount(0);
+  await expect(page.locator('#skills, #education')).toHaveCount(0);
+  const socialLinks = {
+    Portfolio: 'https://rinshid-portfolio.vercel.app/',
+    GitHub: 'https://github.com/rinshidvp',
+    LinkedIn: 'https://www.linkedin.com/in/rinshidrazaq/',
+    YouTube: 'https://www.youtube.com/@RinshidRazaq',
+    Instagram: 'https://www.instagram.com/rinshidrazaq/',
+  };
+  for (const [platform, url] of Object.entries(socialLinks)) {
+    await expect(page.locator('main').getByRole('link', { name: `${platform} ↗`, exact: true })).toHaveAttribute('href', url);
+    await expect(page.getByRole('navigation', { name: 'Footer' }).getByRole('link', { name: platform, exact: true })).toHaveAttribute('href', url);
+  }
+});
+
+test('previous Now page remains reachable by its existing URL', async ({ page }) => {
+  await page.goto('/now/');
   await expect(page.locator('.page-head time')).toHaveAttribute('datetime', '2026-10-06T00:00:00.000Z');
   await expect(page.getByRole('heading', { name: 'Building this notebook', exact: true })).toBeVisible();
 });

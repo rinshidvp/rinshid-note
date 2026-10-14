@@ -4,9 +4,10 @@ import Entry from '../../components/Entry.astro';
 import { catalog } from '../../lib/content';
 import { site } from '../../config/site';
 const { projects } = await catalog();
+const github = site.links.find((link) => link.platform === 'GitHub')!;
 ---
 <Shell title="Projects" description="Useful software, public experiments, and the decisions behind them.">
   <header class="page-head"><p class="eyebrow">Work, with context</p><h1>Things I’ve built.</h1><p class="summary">Small tools and practical experiments. Here’s who they’re for, how they work, and where their limits are.</p></header>
   {projects.map((entry) => <Entry collection="projects" entry={entry} headingLevel={2} />)}
-  <div class="empty-note"><h2>There’s more in the code.</h2><p>These are selected projects. You can explore other experiments, releases, and coursework on <a href={site.links[0].url}>my GitHub profile ↗</a>.</p></div>
+  <div class="empty-note"><h2>There’s more in the code.</h2><p>These are selected projects. You can explore other experiments, releases, and coursework on <a href={github.url}>my GitHub profile ↗</a>.</p></div>
 </Shell>

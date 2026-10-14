@@ -16,13 +16,17 @@ try {
   }
   for (const route of ['/rss.xml', '/sitemap-index.xml', '/sitemap-0.xml', '/robots.txt']) assert.equal((await context.request.get(`${origin}${route}`)).status(), 200, route);
   for (const route of ['/writing/draft-canary/', '/videos/draft-video/', '/projects/private-project-canary/', '/writing/fixture-guide/', '/.local/discovery.md', '/src/content/writing/draft-canary.md']) assert.equal((await context.request.get(`${origin}${route}`)).status(), 404, route);
-  const legacy = await context.request.get(`${origin}/Rinshid_CV.html`); assert.equal(new URL(legacy.url()).pathname, '/about/');
+  assert.equal((await context.request.get(`${origin}/Rinshid_CV.html`)).status(), 404);
   await page.setViewportSize({ width: 390, height: 844 }); await page.goto(origin);
   assert(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth));
   await page.getByLabel('Appearance').selectOption('dark'); await page.reload();
   assert.equal(await page.locator('html').getAttribute('data-theme'), 'dark');
-  await page.getByRole('navigation', { name: 'Main navigation' }).getByRole('link', { name: 'Projects', exact: true }).click();
-  assert.equal(new URL(page.url()).pathname, '/projects/');
+  assert.equal(await page.getByRole('heading', { name: 'Selected projects' }).count(), 0);
+  await page.getByRole('link', { name: 'Browse writing' }).click();
+  assert.equal(new URL(page.url()).pathname, '/writing/');
+  await page.getByRole('navigation', { name: 'Main navigation' }).getByRole('link', { name: 'About', exact: true }).click();
+  assert.equal(await page.locator('main').getByRole('link', { name: 'Portfolio ↗', exact: true }).getAttribute('href'), 'https://rinshid-portfolio.vercel.app/');
+  assert.equal(await page.locator('.experience-list').count(), 0);
   assert.deepEqual(errors, []);
-  console.log(`Live verification passed: ${origin}. Public routes/feeds/canonicals, private/draft 404s, CV redirect, mobile navigation and theme persistence.`);
+  console.log(`Live verification passed: ${origin}. Reading-first navigation, portfolio link, retained routes/feeds/canonicals, private/draft 404s, mobile layout and theme persistence.`);
 } finally { await browser.close(); }
