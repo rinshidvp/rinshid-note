@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="520" viewBox="0 0 640 520" role="img" aria-labelledby="title desc">
+  <title id="title">Shaping what stays</title>
+  <desc id="desc">A potter uses a small loop tool to refine a terracotta vase. A rough lump of clay and discarded curls sit nearby, showing the choices behind the finished form.</desc>
+  <defs>
+    <linearGradient id="clay" x1="0" x2="1"><stop stop-color="#be8666"/><stop offset=".48" stop-color="#d6a783"/><stop offset="1" stop-color="#a96c4c"/></linearGradient>
+    <pattern id="clay-lines" width="5" height="7" patternUnits="userSpaceOnUse"><path d="M0 1h5" stroke="#8c5035" stroke-width=".7" opacity=".25"/></pattern>
+  </defs>
+  <rect width="640" height="520" fill="#fcf8f2"/>
+  <path d="M40 409q266-46 557-1v55H40z" fill="#e9ddca"/>
+  <path d="M37 464h564M70 476h503" fill="none" stroke="#c9b5a0" stroke-width="1.5"/>
+  <ellipse cx="333" cy="427" rx="172" ry="24" fill="#c9b5a0" opacity=".4"/>
+  <g stroke="#74513c" stroke-width="2" stroke-linejoin="round">
+    <path d="M73 392q-9-23 3-38-11-18 8-28 0-25 23-27 14-24 39-12 27-11 37 17 26 2 23 29 20 19 6 44l-11 27z" fill="#b98a6b"/>
+    <path d="M87 345q15-17 26-6t29-9q15-16 34 2m-72 43q15-22 30-9t33-8m-46-48 12 10" fill="none" stroke="#8c6248"/>
+    <path d="M84 391q54 14 117 0" fill="none"/>
+    <path d="M206 389q128 20 258-1v23q-117 37-258 1z" fill="#ad9981"/>
+    <ellipse cx="335" cy="386" rx="129" ry="25" fill="#e3d5c2"/>
+    <ellipse cx="335" cy="386" rx="106" ry="17" fill="none" stroke="#bba58a"/>
+    <path d="M292 167q6 39-16 67c-28 36-31 89-6 126q9 14 65 14t65-14c25-37 22-90-6-126q-22-28-16-67z" fill="url(#clay)"/>
+    <path d="M292 167q6 39-16 67c-28 36-31 89-6 126q9 14 65 14t65-14c25-37 22-90-6-126q-22-28-16-67z" fill="url(#clay-lines)" stroke="none"/>
+    <ellipse cx="335" cy="166" rx="44" ry="11" fill="#82523a"/>
+    <ellipse cx="335" cy="164" rx="31" ry="6" fill="#60402f" stroke="none"/>
+    <path d="M301 197q-3 27-20 51-22 36-10 77" fill="none" stroke="#e5bc97" stroke-width="5" stroke-linecap="round"/>
+    <path d="M279 351q54 14 112 0" fill="none" stroke="#976044"/>
+  </g>
+  <g stroke="#74513c" stroke-width="2" stroke-linejoin="round">
+    <path d="M640 103l-98 40-53 33-33 19q-10 6-5 15 5 8 17 3l27-12-19 24q-7 9 0 15 8 7 16-2l25-27 21-14 102-35" fill="#d8b394"/>
+    <path d="M640 99l-84 35 27 53 57-19" fill="#a2a184"/>
+    <path d="M564 143l17 34M495 201l17-13" fill="none"/>
+    <path d="M483 224l-61 41" fill="none" stroke="#604a39" stroke-width="9" stroke-linecap="round"/>
+    <path d="M424 260q-32-5-33 14t27 6z" fill="none" stroke="#786d60" stroke-width="3"/>
+    <path d="M393 278q-25 14-7 30t-4 26" fill="none" stroke="#a96c4c" stroke-width="7" stroke-linecap="round"/>
+  </g>
+  <g fill="none" stroke="#a96c4c" stroke-width="7" stroke-linecap="round">
+    <path d="M438 407q26-21 34-7t-18 18q-21 3-14 12"/>
+    <path d="M485 434q25-20 31-6t-13 14"/>
+    <path d="M242 438q-13-12-22-4t5 13"/>
+  </g>
+  <path d="M434 78q-9-10-20-2t-6 17m-5 12 7 5" fill="none" stroke="#d8c6b2" stroke-width="1.5"/>
+</svg>

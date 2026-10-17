@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="520" viewBox="0 0 640 520" role="img" aria-labelledby="title desc">
+  <title id="title">Choosing from abundance</title>
+  <desc id="desc">A printer produces a scattered collection of abstract prints. A human hand selects one quiet botanical composition from the pile.</desc>
+  <defs>
+    <pattern id="hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(28)"><path d="M0 0v7" stroke="#9f8269" stroke-width=".7" opacity=".3"/></pattern>
+    <linearGradient id="paper" x2="0" y2="1"><stop stop-color="#fcf8f2"/><stop offset="1" stop-color="#f4ebde"/></linearGradient>
+  </defs>
+  <rect width="640" height="520" fill="url(#paper)"/>
+  <ellipse cx="321" cy="443" rx="261" ry="27" fill="#e8dbca" opacity=".65"/>
+  <path d="M38 447h558" fill="none" stroke="#c9b5a0" stroke-width="1.5"/>
+  <g stroke="#604a39" stroke-width="2" stroke-linejoin="round">
+    <path d="M73 139v-49q0-10 10-10h134q10 0 10 10v49" fill="#fffdf8"/>
+    <path d="M52 155q0-24 24-24h160q24 0 24 24v102H52z" fill="#d5c6b4"/>
+    <path d="M52 176h208v81H52z" fill="#ece1d2"/>
+    <rect x="83" y="193" width="146" height="27" rx="4" fill="#604a39"/>
+    <circle cx="231" cy="153" r="5" fill="#8c5035" stroke="none"/>
+    <path d="M99 206h111l26 91H116z" fill="#fffdf8"/>
+    <path d="M126 229l26-7 40 48-30 5z" fill="#ba7655" stroke="none"/>
+    <circle cx="192" cy="243" r="15" fill="#cdb785" stroke="none"/>
+    <path d="M70 260v10m170-10v10" fill="none"/>
+  </g>
+  <g transform="rotate(-17 156 363)" stroke="#8e7460" stroke-width="1.5">
+    <rect x="68" y="287" width="176" height="143" fill="#f7efe3"/>
+    <path d="M90 309h130v98H90z" fill="#d3b18a" stroke="none"/>
+    <path d="M90 407l57-91 29 54 44-29v66" fill="#8c5035" stroke="none"/>
+    <circle cx="199" cy="330" r="13" fill="#efe0bb" stroke="none"/>
+  </g>
+  <g transform="rotate(12 286 365)" stroke="#8e7460" stroke-width="1.5">
+    <rect x="201" y="272" width="173" height="186" fill="#fffaf1"/>
+    <circle cx="284" cy="350" r="55" fill="#a3a181" stroke="none"/>
+    <path d="M227 410l24-92 40 105 43-107 16 94" fill="none" stroke="#8c5035" stroke-width="12"/>
+    <path d="M225 292h128v140H225z" fill="url(#hatch)" stroke="none"/>
+  </g>
+  <g transform="rotate(-8 414 269)">
+    <path d="M329 154h181v252H329z" fill="#c5af96" opacity=".35" transform="translate(7 8)"/>
+    <rect x="329" y="154" width="181" height="252" fill="#fffdf8" stroke="#604a39" stroke-width="2"/>
+    <path d="M419 340c-8-45-2-82 17-117" fill="none" stroke="#6c7455" stroke-width="3"/>
+    <path d="M423 289c-33-3-47-24-42-41 24 3 39 17 42 41M427 268c27-3 42-20 40-36-23 1-38 14-40 36M436 240c-10-24-4-43 11-50 12 18 7 37-11 50M418 316c-32 0-50-16-48-32 23-2 41 10 48 32" fill="#a1a482" stroke="#6c7455" stroke-width="1.7"/>
+    <path d="M398 333h48l-8 36h-32z" fill="#b87453" stroke="#8c5035" stroke-width="1.7"/>
+    <ellipse cx="422" cy="334" rx="24" ry="5" fill="#8c5035"/>
+  </g>
+  <g stroke="#74513c" stroke-width="2" stroke-linejoin="round">
+    <path d="M640 369l-62-28-44-32-32-20q-12-7-18 2-5 8 4 16l21 19-29-4q-14-2-16 8-2 9 10 13l32 10-21 2q-12 2-11 11 0 9 12 10l47 1 38 24 69 41" fill="#d8b394"/>
+    <path d="M640 375l-52-23-25 54 77 47" fill="#8c5035"/>
+    <path d="M574 360l-16 34M509 326l16 9M506 353l20 4" fill="none"/>
+  </g>
+  <path d="M285 100l10-12m12 32 16-4M294 143l11 5" stroke="#b79076" stroke-width="2" stroke-linecap="round"/>
+</svg>

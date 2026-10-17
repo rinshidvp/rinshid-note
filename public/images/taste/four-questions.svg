@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="520" viewBox="0 0 640 520" role="img" aria-labelledby="title desc">
+  <title id="title">Learning to look</title>
+  <desc id="desc">A hand holds a magnifying glass over a living leaf. An open sketchbook nearby contains an early rough study and a more carefully observed botanical drawing.</desc>
+  <defs>
+    <pattern id="paper-shade" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(25)"><path d="M0 0v6" stroke="#bba58c" stroke-width=".65" opacity=".3"/></pattern>
+    <linearGradient id="leaf" x2="1" y2="1"><stop stop-color="#b4b594"/><stop offset="1" stop-color="#7d8965"/></linearGradient>
+  </defs>
+  <rect width="640" height="520" fill="#fcf8f2"/>
+  <ellipse cx="329" cy="440" rx="264" ry="25" fill="#e5d8c5" opacity=".7"/>
+  <path d="M38 459h563" stroke="#c9b5a0" stroke-width="1.5"/>
+  <g stroke="#6f7656" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M152 364q1-93 26-166" fill="none" stroke-width="3"/>
+    <path d="M161 292q-63-4-71-60 57 1 71 60M169 249q52 2 67-48-51-5-67 48M176 213q-39-31-23-77 47 22 23 77M152 333q49-2 61-43-48-3-61 43" fill="url(#leaf)"/>
+    <path d="M155 286l-51-41m68-1 49-31m-46-9-17-52m-2 174 44-26" fill="none" stroke="#f1ebd7" stroke-width="1.5"/>
+  </g>
+  <g stroke="#8c5035" stroke-width="2">
+    <path d="M112 354h90l-13 68q-33 12-64 0z" fill="#ba7b58"/>
+    <ellipse cx="157" cy="354" rx="45" ry="11" fill="#8c5035"/>
+    <ellipse cx="157" cy="353" rx="34" ry="6" fill="#604a39" stroke="none"/>
+    <path d="M132 368l8 45" stroke="#d7a580" stroke-width="4" stroke-linecap="round"/>
+  </g>
+  <g transform="rotate(-8 402 362)" stroke="#8d7761" stroke-width="1.6" stroke-linejoin="round">
+    <path d="M244 276q73-13 149 0 74-13 149 0v166q-76-11-149 1-74-12-149-1z" fill="#d5c4ad" transform="translate(0 7)"/>
+    <path d="M244 276q73-13 149 0 74-13 149 0v166q-76-11-149 1-74-12-149-1z" fill="#fffdf8"/>
+    <path d="M393 277v166" fill="none" stroke="#c7b397"/>
+    <path d="M380 281v154m20-154v154" fill="none" stroke="#e8ddcd"/>
+    <path d="M295 399l25-84m-14 57q-28-7-28-30 31-2 28 30m8-30q28-5 29-29-29-2-29 29m-15 55q29 2 39-22-29-10-39 22" fill="none" stroke="#bdad98" stroke-width="2"/>
+    <path d="M455 407q-3-55 21-100" fill="none" stroke="#6f7656" stroke-width="2"/>
+    <path d="M461 372q-33-6-34-34 30 2 34 34m8-35q30-5 34-30-27-3-34 30m-14 62q30 2 42-26-34-4-42 26" fill="#e2e5d2" stroke="#7d8965"/>
+    <path d="M430 343l28 25m15-35 25-21m-39 83 31-18" fill="none" stroke="#9ba47f" stroke-width="1"/>
+  </g>
+  <g stroke="#604a39" stroke-width="2">
+    <path d="M213 225l116 100" stroke-width="14" stroke-linecap="round"/>
+    <circle cx="191" cy="192" r="64" fill="#fffdf8" fill-opacity=".45" stroke-width="9"/>
+    <path d="M169 235q-37-15-26-51 9-31 35-34" fill="none" stroke="#fffdf8" stroke-width="5" stroke-linecap="round"/>
+    <path d="M173 227q52 1 63-48-51-4-63 48" fill="#a3ad84" stroke="#6f7656"/>
+    <path d="M178 223l46-36m-28 22-3-16m16 5 15 2" fill="none" stroke="#e7ead6" stroke-width="1.5"/>
+  </g>
+  <g stroke="#74513c" stroke-width="2" stroke-linejoin="round">
+    <path d="M640 209l-111 16-89 22-92 16-31 15q-12 6-8 16 5 9 17 4l25-9-15 17q-8 9-1 15 8 7 17-3l29-31 22-8 126-15 111 8" fill="#d8b394"/>
+    <path d="M640 205l-96 16 8 53 88 2" fill="#8c5035"/>
+    <path d="M555 229l4 37M351 289l18-12" fill="none"/>
+  </g>
+  <path d="M519 446l37-50 7 5-37 50-11 6z" fill="#cfae80" stroke="#8c6c4d" stroke-width="1.5"/>
+  <path d="M513 456l4-10 8 6z" fill="#604a39"/>
+  <path d="M80 104q15-19 34-7m-15 8 18-4m-35 8 17-15" fill="none" stroke="#d4c3ad" stroke-width="1.5"/>
+</svg>

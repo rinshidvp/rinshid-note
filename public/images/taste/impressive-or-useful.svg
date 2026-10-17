@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="520" viewBox="0 0 640 520" role="img" aria-labelledby="title desc">
+  <title id="title">Finding a clear direction</title>
+  <desc id="desc">A traveller pauses at a fork. An ornate sign points in conflicting directions; a plain wooden arrow points along an open path to a welcoming doorway.</desc>
+  <defs>
+    <linearGradient id="ground" x2="0" y2="1"><stop stop-color="#fcf8f2"/><stop offset="1" stop-color="#f0e6d7"/></linearGradient>
+    <pattern id="shade" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(35)"><path d="M0 0v6" stroke="#746253" stroke-width=".65" opacity=".2"/></pattern>
+  </defs>
+  <rect width="640" height="520" fill="url(#ground)"/>
+  <circle cx="489" cy="116" r="60" fill="#e4cfaa" opacity=".6"/>
+  <path d="M36 339q104-91 207-30t186-35q96-52 178 5" fill="#e4e1cf"/>
+  <path d="M307 510c-12-87-55-129-101-166S116 296 137 264" fill="none" stroke="#deccb5" stroke-width="49"/>
+  <path d="M310 510c-7-90 33-133 91-162s86-51 90-96" fill="none" stroke="#e8d7bd" stroke-width="54"/>
+  <path d="M331 451c8-41 35-68 77-88s76-45 81-73" fill="none" stroke="#baa48b" stroke-width="1.5" stroke-dasharray="3 10"/>
+  <g stroke="#66503e" stroke-width="2" stroke-linejoin="round">
+    <path d="M445 267V150q0-48 47-48t47 48v117" fill="#d4bca0"/>
+    <path d="M459 267V153q0-35 33-35t33 35v114" fill="#8c5035"/>
+    <path d="M469 266V156q0-28 24-28v138" fill="#fae8c5" stroke="none"/>
+    <path d="M448 268h91m-100 9h109m-117 10h133" fill="none" stroke="#a0866e"/>
+    <path d="M536 230q28-44 28-94m-9 61-17-20m24-1 18-22" fill="none" stroke="#8d9375"/>
+    <path d="M565 169q-27-8-26-27 24-2 26 27M565 159q24-4 27-23-22-5-27 23" fill="#a1a482" stroke="#7c8565"/>
+  </g>
+  <g stroke="#71533e" stroke-width="2" stroke-linejoin="round">
+    <path d="M169 341V146" fill="none" stroke-width="9"/>
+    <path d="M77 175q11-18 28-7l103-16 25 23-22 25-106 8q-17 13-28-4 13-14 0-29z" fill="#b9906a"/>
+    <path d="M245 221q-9-16-25-6l-96-8-23 20 23 20 96 5q17 12 25-4-11-13 0-27z" fill="#dbc29c"/>
+    <path d="M98 188q19-24 38 0t38-1 39-9M127 229q24-11 41 2t49 4" fill="none" stroke="#8c5035"/>
+    <path d="M148 166q-23-41-3-43 16-1 12 17m25 14q25-32 35-12 8 16-12 21" fill="none" stroke="#8c5035"/>
+    <path d="M385 354V210" fill="none" stroke-width="8"/>
+    <path d="M337 214h75v-18l44 32-44 32v-18h-75z" fill="#8c5035"/>
+    <path d="M351 224h47" fill="none" stroke="#d9b390" stroke-width="1"/>
+  </g>
+  <g stroke="#604a39" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <ellipse cx="273" cy="445" rx="35" ry="9" fill="#cdbba5" stroke="none" opacity=".7"/>
+    <path d="M262 382l-4 57h12l9-53 6 53h12l-5-64" fill="#625746"/>
+    <path d="M259 327q17-12 31 0l12 55q-21 12-48 1z" fill="#bc7956"/>
+    <path d="M264 328l-17 37-14-8m57-26 19 23 20-18" fill="none" stroke="#a98263" stroke-width="9"/>
+    <path d="M267 317v13m15-16v15" fill="none" stroke="#b98d6a" stroke-width="7"/>
+    <circle cx="275" cy="300" r="18" fill="#d8b394"/>
+    <path d="M257 296q0-25 23-18 17 3 15 19l-14-9-23 9" fill="#604a39"/>
+    <path d="M263 334q-12 20-6 42" fill="none" stroke="#594a3a" stroke-width="4"/>
+    <path d="M248 342q-16-1-17 14l-2 21 23 6 6-22q3-15-10-19" fill="#a4a284"/>
+  </g>
+  <path d="M69 368l-4-20m5 14 10-13m-20 11-10-9m482 48 4-24m-3 12-12-11m16 8 10-10" fill="none" stroke="#8d9375" stroke-width="2" stroke-linecap="round"/>
+  <path d="M97 293l30 10-8 18-31-10zM512 332l14-2 8 9-18 5z" fill="url(#shade)" stroke="#bba88e"/>
+</svg>
