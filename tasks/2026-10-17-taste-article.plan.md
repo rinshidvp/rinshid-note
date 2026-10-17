@@ -54,3 +54,9 @@ Remove only this article, its four assets and the added feature-test blocks. No 
 - Preserve all pre-existing working-tree changes. Stage a production-ready test file with the new Taste tests and an archive assertion that uses the published Taste article rather than the unrelated local article.
 - Validate the exact staged source in an ignored export before committing, then push main and verify the production title, figures, discovery and feeds.
 - Exact staged release validated in .local/taste-release-20261017: check/build/verify passed (24 output files, 276 internal links); all 13 release tests passed without the unrelated engineering article.
+
+## Correction: preserve the existing publication
+- User reported that the previous engineering article disappeared after deployment. Live request confirmed its original URL returned 404 while the Taste article returned 200; Git did not track the engineering record, but its complete local file remained intact.
+- The earlier exclusion decision was wrong: this was an existing publication that needed to survive the new deployment, not an unrelated draft. Restore it to version control unchanged, including its existing reading-path tests.
+- Add an explicit regression verifying both article links on Home and Writing and both original direct URLs return 200. Validate and push the correction, then verify both publications and their feed/sitemap entries live.
+- Correction validated locally: check/build/verify passed; all 15 tests passed, including the explicit two-article preservation regression.

@@ -23,7 +23,7 @@ test('dark appearance persists and system preference works', async ({ page }) =>
 for (const theme of ['light', 'dark'] as const) {
   test(`pages remain readable and accessible on mobile in ${theme}`, async ({ page }) => {
     await page.setViewportSize({ width: 360, height: 800 }); await page.emulateMedia({ colorScheme: theme });
-    for (const path of ['/', '/projects/', '/projects/cosmiq-sync/', '/writing/', '/guides/', '/videos/', '/about/', '/now/', '/links/', '/contact/']) {
+    for (const path of ['/', '/projects/', '/projects/cosmiq-sync/', '/writing/', '/writing/how-to-think-like-an-engineer-in-the-ai-era/', '/guides/', '/videos/', '/about/', '/now/', '/links/', '/contact/']) {
       const response = await page.goto(path); expect(response?.status()).toBe(200);
       expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
       const results = await new AxeBuilder({ page }).withTags(['wcag2a', 'wcag2aa', 'wcag21aa']).analyze();
@@ -43,9 +43,30 @@ test('writing archive explains unmatched filters and lets readers reset them', a
   await expect(page.getByRole('heading', { name: 'No matching entries.' })).toBeVisible();
   await page.getByRole('button', { name: 'Clear filters' }).click();
   await expect(page.getByRole('heading', { name: 'No matching entries.' })).toBeHidden();
-  await expect(page.getByRole('link', { name: 'Everyone Is Learning AI. This Skill Sets You Apart.', exact: true })).toBeVisible();
+  await expect(page.getByRole('link', { name: 'How to Think Like an Engineer in the AI Era', exact: true })).toBeVisible();
   await expect(page).toHaveURL(/\/writing\/$/);
   expect(errors).toEqual([]);
+});
+
+test('engineering article is discoverable and provides a practical reading path', async ({ page, request }) => {
+  const title = 'How to Think Like an Engineer in the AI Era';
+  const path = '/writing/how-to-think-like-an-engineer-in-the-ai-era/';
+  await page.goto('/');
+  await page.getByRole('link', { name: title, exact: true }).click();
+  await expect(page).toHaveURL(new RegExp(`${path}$`));
+  await expect(page.getByRole('heading', { level: 1 })).toHaveText(title);
+  await page.locator('.toc').getByRole('link', { name: 'A checklist you can use today' }).click();
+  await expect(page).toHaveURL(/#a-checklist-you-can-use-today$/);
+  await expect(page.getByRole('heading', { name: 'A checklist you can use today' })).toBeInViewport();
+  await expect(page.locator('article.prose')).toContainText('What is the smallest useful version?');
+  await page.getByRole('link', { name: '← The notebook' }).click();
+  await page.getByRole('searchbox').fill('canteen');
+  await expect(page.getByRole('link', { name: title, exact: true })).toBeVisible();
+  for (const url of ['/rss.xml', '/sitemap-0.xml']) {
+    const response = await request.get(url);
+    expect(response.status()).toBe(200);
+    expect(await response.text()).toContain(path);
+  }
 });
 
 test('keyboard skip link and desktop composition are usable', async ({ page }) => {
@@ -118,6 +139,22 @@ test('taste article is discoverable as standalone writing with a practical readi
     const response = await request.get(url);
     expect(response.status()).toBe(200);
     expect(await response.text()).toContain(path);
+  }
+});
+
+test('publishing taste keeps the earlier engineering article available', async ({ page, request }) => {
+  const articles = [
+    { title: 'How to Think Like an Engineer in the AI Era', path: '/writing/how-to-think-like-an-engineer-in-the-ai-era/' },
+    { title: 'Everyone Is Learning AI. This Skill Sets You Apart.', path: '/writing/taste-in-the-ai-era/' },
+  ];
+  for (const path of ['/', '/writing/']) {
+    await page.goto(path);
+    for (const article of articles) {
+      await expect(page.getByRole('link', { name: article.title, exact: true })).toHaveAttribute('href', article.path);
+    }
+  }
+  for (const article of articles) {
+    expect((await request.get(article.path)).status()).toBe(200);
   }
 });
 
